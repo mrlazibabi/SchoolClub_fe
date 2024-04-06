@@ -24,8 +24,8 @@ export async function getClubById(id){
     })
 }
 
-export async function updateClub(){
-    return await axios.put(DOMAIN_API)
+export async function updateClub(data){
+    return await axios.put(DOMAIN_API, data)
     .then(res => { 
         if(res.status === 200){
             return res.data;
